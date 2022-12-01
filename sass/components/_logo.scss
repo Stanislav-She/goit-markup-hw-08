@@ -1,0 +1,16 @@
+.logo {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  color: var(--brand-color);
+
+  @include desktop {
+    text-align: start;
+  }
+}

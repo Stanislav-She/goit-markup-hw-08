@@ -1,0 +1,25 @@
+@import "./utils/variables";
+@import "./utils/visually-hidden";
+@import "./utils/mixins";
+
+@import "./base/common";
+@import "./base/container";
+@import "./base/section";
+
+@import "./components/logo";
+@import "./components/button";
+@import "./components/socialnetwork";
+@import "./components/heder_mobile";
+@import "./components/menu-container";
+
+@import "./layout/header";
+@import "./layout/solutions";
+@import "./layout/qualities";
+@import "./layout/activity";
+@import "./layout/team";
+@import "./layout/customers";
+@import "./layout/footer";
+@import "./layout/modal";
+@import "./layout/header_portfolio";
+@import "./layout/works";
+@import "./layout/basic";

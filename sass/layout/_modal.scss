@@ -1,0 +1,224 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  opacity: 1;
+  transition: opacity var(--transition), visibility var(--transition);
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+
+  & .modal {
+    transform: translate(-50%, -50%) scale(0.1);
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 40px;
+  min-width: 528px;
+  min-height: 581px;
+  background: var(--brand-color-three);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition);
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: var(--brand-color-three);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal__icon {
+  fill: currentColor;
+  transition: fill var(--transition);
+
+  .modal__close:hover &,
+  .modal__close:focus & {
+    fill: var(--brand-color);
+  }
+}
+
+.modal__title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.modal__cover {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.modal__group {
+  position: relative;
+}
+
+.modal__label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: var(--brand-color-two);
+}
+
+.modal__input {
+  width: 100%;
+  padding: 11px 12px 11px 42px;
+  border: 1px solid var(--border-input);
+  border-radius: 4px;
+  color: var(--brand-color-five);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  outline: transparent;
+  transition: border var(--transition);
+
+  &:focus,
+  &:hover {
+    border-color: var(--brand-color);
+  }
+}
+
+.modal__svg {
+  fill: currentColor;
+  position: absolute;
+  pointer-events: none;
+  bottom: 11px;
+  left: 12px;
+  border: none;
+  transition: fill var(--transition);
+
+  .modal__input:focus + &,
+  .modal__input:hover + & {
+    fill: var(--brand-color);
+  }
+}
+
+.modal__textarea {
+  resize: none;
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  border: 1px solid var(--border-input);
+  border-radius: 4px;
+  color: var(--brand-color-five);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  outline: transparent;
+  transition: border var(--transition);
+
+  &:focus,
+  &:hover {
+    border-color: var(--brand-color);
+  }
+
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.modal__check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: var(--brand-color-two);
+}
+
+.modal__consent {
+  appearance: none;
+}
+
+.modal__frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  outline: none;
+  border: 2px solid var(--brand-color-five);
+  transition: background-color var(--transition), border var(--transition);
+
+  &:focus {
+    border: 2px solid var(--brand-color);
+  }
+
+  .modal__consent:checked + & {
+    background-color: var(--brand-color);
+    border: 2px solid transparent;
+  }
+}
+
+.modal__image {
+  fill: var(--brand-color-three);
+}
+
+.modal__link {
+  color: var(--brand-color);
+}
+
+.modal__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 10px;
+  width: 200px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  background-color: var(--brand-color);
+  color: var(--brand-color-three);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color var(--transition);
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-studio-btn);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    outline: none;
+  }
+}

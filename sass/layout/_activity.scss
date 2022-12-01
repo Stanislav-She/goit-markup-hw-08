@@ -1,0 +1,56 @@
+.activity {
+  padding-top: 0px;
+}
+
+.activity__container {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+
+  @include desktop {
+    display: flex;
+  }
+}
+
+.activity__title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--brand-color-five);
+}
+
+.activity__item {
+  display: flex;
+  gap: 30px;
+}
+
+.activity__list {
+  width: 370px;
+}
+
+.activity__cover {
+  position: relative;
+}
+
+.activity__covertext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  transform: translate(0%, -100%);
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.activity__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}

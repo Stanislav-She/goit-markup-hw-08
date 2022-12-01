@@ -1,0 +1,15 @@
+.nav__link--current--portfolio {
+  text-decoration: none;
+  color: var(--brand-color);
+
+  &::after {
+    content: "";
+    width: 60%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--brand-color);
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+  }
+}

@@ -1,0 +1,19 @@
+.socialnet {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.socialnet__list {
+    width: 44px;
+    height: 44px;
+}
+
+.socialnet__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
