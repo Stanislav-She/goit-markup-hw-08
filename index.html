@@ -21,7 +21,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
 
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./dist/css/main.min.css" />
   </head>
 
   <!-------- BODY -------->
@@ -78,14 +78,14 @@
 
       <!-- Solutions -->
 
-      <!-- <section class="solutions">
+      <section class="solutions">
         <div class="solutions__container container">
           <h1 class="solutions__title">Ефективні рішення для вашого бізнесу</h1>
           <button class="solutions__button button" data-modal-open type="button">
             Замовити послугу
           </button>
         </div>
-      </section> -->
+      </section>
 
       <!-- Solutions -->
 
@@ -188,7 +188,19 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__item">
             <li class="team__list">
-              <img src="images/ihor.jpg" alt="designer-ihor" width="270" />
+              <img
+                srcset="
+                  ./images/ihor-450@1x.jpg 450w,
+                  ./images/ihor-450@2x.jpg 900w,
+                  ./images/ihor-354@1x.jpg 354w,
+                  ./images/ihor-354@2x.jpg 708w,
+                  ./images/ihor-270@1x.jpg 270w,
+                  ./images/ihor-270@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/ihor-450@1x.jpg"
+                alt="designer-ihor"
+              />
               <div class="team__cover">
                 <h3 class="team__name">Ігор Дем'яненко</h3>
                 <p class="team__specialty">Product Designer</p>
@@ -249,7 +261,20 @@
               </div>
             </li>
             <li class="team__list">
-              <img src="images/olha.jpg" alt="developer-olha" width="270" />
+              <img
+                srcset="
+                  ./images/olha-450@1x.jpg 450w,
+                  ./images/olha-450@2x.jpg 900w,
+                  ./images/olha-354@1x.jpg 354w,
+                  ./images/olha-354@2x.jpg 708w,
+                  ./images/olha-270@1x.jpg 270w,
+                  ./images/olha-270@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/olha-450@1x.jpg"
+                alt="developer-olha"
+              />
+
               <div class="team__cover">
                 <h3 class="team__name">Ольга Рєпіна</h3>
                 <p class="team__specialty">Frontend Developer</p>
@@ -310,7 +335,21 @@
               </div>
             </li>
             <li class="team__list">
-              <img src="images/mykola.jpg" alt="marketing-mykola" width="270" />
+              <!-- <img src="images/mykola.jpg" alt="marketing-mykola" width="270" /> -->
+
+              <img
+                srcset="
+                  ./images/olha-450@1x.jpg 450w,
+                  ./images/olha-450@2x.jpg 900w,
+                  ./images/olha-354@1x.jpg 354w,
+                  ./images/olha-354@2x.jpg 708w,
+                  ./images/olha-270@1x.jpg 270w,
+                  ./images/olha-270@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/olha-450@1x.jpg"
+                alt="developer-olha"
+              />
               <div class="team__cover">
                 <h3 class="team__name">Микола Тарасов</h3>
                 <p class="team__specialty">Marketing</p>
@@ -371,7 +410,21 @@
               </div>
             </li>
             <li class="team__list">
-              <img src="images/mykhailo.jpg" alt="designer-mykhailo" width="270" />
+              <!-- <img src="images/mykhailo.jpg" alt="designer-mykhailo" width="270" /> -->
+
+              <img
+                srcset="
+                  ./images/olha-450@1x.jpg 450w,
+                  ./images/olha-450@2x.jpg 900w,
+                  ./images/olha-354@1x.jpg 354w,
+                  ./images/olha-354@2x.jpg 708w,
+                  ./images/olha-270@1x.jpg 270w,
+                  ./images/olha-270@2x.jpg 540w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/olha-450@1x.jpg"
+                alt="developer-olha"
+              />
               <div class="team__cover">
                 <h3 class="team__name">Михайло Єрмаков</h3>
                 <p class="team__specialty">UI Designer</p>
@@ -633,7 +686,7 @@
 
     <!-- Modal ---->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal__close" type="button" data-modal-close>
           <svg class="modal__icon" width="18" height="18">
@@ -693,7 +746,7 @@
           <button class="modal__button button" type="submit">Відправити</button>
         </form>
       </div>
-    </div> -->
+    </div>
 
     <!-- Modal ---->
 
@@ -724,7 +777,7 @@
           <a href="tel:+380961111111" class="menu__contacts-link link">+38 096 111 11 11</a>
         </li>
         <li class="menu__contacts-list">
-          <a href="mailto:info@devstudio.com" class="menu__contacts-link link"
+          <a href="mailto:info@devstudio.com" class="menu__contacts-link menu__contacts-mail link"
             >info@devstudio.com</a
           >
         </li>
