@@ -1,5 +1,12 @@
 .menu__container {
-  padding: 48px 84px 48px 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: scroll;
+
+  @include mobile {
+    overflow: none;
+  }
 }
 
 .heder__mobile {
@@ -28,7 +35,7 @@
 }
 
 .menu__container-nav {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 }
 
 .menu__container-item {
@@ -92,7 +99,7 @@
   padding-left: 10px;
   padding-right: 10px;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   border-right: 1px solid rgba(33, 33, 33, 0.2);

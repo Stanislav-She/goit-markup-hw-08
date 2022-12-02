@@ -8,6 +8,11 @@
   visibility: visible;
   opacity: 1;
   transition: opacity var(--transition), visibility var(--transition);
+  overflow: scroll;
+
+  @include mobile {
+    overflow: none;
+  }
 }
 
 .is-hidden {
@@ -22,17 +27,29 @@
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 0px;
   left: 50%;
   padding: 40px;
-  min-width: 528px;
-  min-height: 581px;
+  min-width: 320px;
+  min-height: 609px;
+
   background: var(--brand-color-three);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateX(-50%) scale(1);
   transition: transform var(--transition);
+
+  @include mobile {
+    transform: translate(-50%, -50%) scale(1);
+    top: 50%;
+    min-width: 450px;
+  }
+
+  @include desktop {
+    min-width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal__close {
@@ -64,9 +81,18 @@
   margin-bottom: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.1;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @include mobile {
+    width: 370px;
+  }
+
+  @include desktop {
+    line-height: 1.1;
+    width: auto;
+  }
 }
 
 .modal__cover {
@@ -159,10 +185,19 @@
   user-select: none;
   margin-bottom: 30px;
   cursor: pointer;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 7px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--brand-color-two);
+
+  @include mobile {
+    font-size: 12px;
+  }
+
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .modal__consent {

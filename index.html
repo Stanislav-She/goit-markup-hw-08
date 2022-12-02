@@ -21,7 +21,7 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
 
-    <link rel="stylesheet" href="./dist/css/main.min.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <!-------- BODY -------->
@@ -153,7 +153,12 @@
           <ul class="activity__item">
             <li class="activity__list">
               <div class="activity__cover">
-                <img src="images/desktop.jpg" alt="desktop applications" width="370" />
+                <img
+                  srcset="./images/desktop@1x.jpg 370w, ./images/desktop@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, 100vw"
+                  src="./images/desktop@1x.jpg"
+                  alt="desktop applications"
+                />
                 <div class="activity__covertext">
                   <p class="activity__text">Десктопні додатки</p>
                 </div>
@@ -161,7 +166,12 @@
             </li>
             <li class="activity__list">
               <div class="activity__cover">
-                <img src="images/mobile.jpg" alt="mobile applications" width="370" />
+                <img
+                  srcset="./images/mobile@1x.jpg 370w, ./images/mobile@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, 100vw"
+                  src="./images/mobile@1x.jpg"
+                  alt="desktop applications"
+                />
                 <div class="activity__covertext">
                   <p class="activity__text">Мобільні додатки</p>
                 </div>
@@ -169,7 +179,12 @@
             </li>
             <li class="activity__list">
               <div class="activity__cover">
-                <img src="images/design.jpg" alt="design solutions" width="370" />
+                <img
+                  srcset="./images/design@1x.jpg 370w, ./images/design@2x.jpg 740w"
+                  sizes="(min-width: 1200px) 370px, 100vw"
+                  src="./images/design@1x.jpg"
+                  alt="design solutions"
+                />
                 <div class="activity__covertext">
                   <p class="activity__text">Дизайнерські рішення</p>
                 </div>
@@ -335,20 +350,18 @@
               </div>
             </li>
             <li class="team__list">
-              <!-- <img src="images/mykola.jpg" alt="marketing-mykola" width="270" /> -->
-
               <img
                 srcset="
-                  ./images/olha-450@1x.jpg 450w,
-                  ./images/olha-450@2x.jpg 900w,
-                  ./images/olha-354@1x.jpg 354w,
-                  ./images/olha-354@2x.jpg 708w,
-                  ./images/olha-270@1x.jpg 270w,
-                  ./images/olha-270@2x.jpg 540w
+                  ./images/mykola-450@1x.jpg 450w,
+                  ./images/mykola-450@2x.jpg 900w,
+                  ./images/mykola-354@1x.jpg 354w,
+                  ./images/mykola-354@2x.jpg 708w,
+                  ./images/mykola-270@1x.jpg 270w,
+                  ./images/mykola-270@2x.jpg 540w
                 "
                 sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/olha-450@1x.jpg"
-                alt="developer-olha"
+                src="./images/mykola-450@1x.jpg"
+                alt="marketing-mykola"
               />
               <div class="team__cover">
                 <h3 class="team__name">Микола Тарасов</h3>
@@ -410,20 +423,18 @@
               </div>
             </li>
             <li class="team__list">
-              <!-- <img src="images/mykhailo.jpg" alt="designer-mykhailo" width="270" /> -->
-
               <img
                 srcset="
-                  ./images/olha-450@1x.jpg 450w,
-                  ./images/olha-450@2x.jpg 900w,
-                  ./images/olha-354@1x.jpg 354w,
-                  ./images/olha-354@2x.jpg 708w,
-                  ./images/olha-270@1x.jpg 270w,
-                  ./images/olha-270@2x.jpg 540w
+                  ./images/mykhailo-450@1x.jpg 450w,
+                  ./images/mykhailo-450@2x.jpg 900w,
+                  ./images/mykhailo-354@1x.jpg 354w,
+                  ./images/mykhailo-354@2x.jpg 708w,
+                  ./images/mykhailo-270@1x.jpg 270w,
+                  ./images/mykhailo-270@2x.jpg 540w
                 "
                 sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
-                src="./images/olha-450@1x.jpg"
-                alt="developer-olha"
+                src="./images/mykhailo-450@1x.jpg"
+                alt="designer-mykhailo"
               />
               <div class="team__cover">
                 <h3 class="team__name">Михайло Єрмаков</h3>
@@ -787,9 +798,15 @@
           <li class="menu__socnet-item">
             <a href="#" class="menu__socnet-link link">Instagram</a>
           </li>
-          <li class="menu__socnet-item"><a href="#" class="menu__socnet-link link">Twitter</a></li>
-          <li class="menu__socnet-item"><a href="#" class="menu__socnet-link link">Facebook</a></li>
-          <li class="menu__socnet-item"><a href="#" class="menu__socnet-link link">LinkedIn</a></li>
+          <li class="menu__socnet-item">
+            <a href="#" class="menu__socnet-link link">Twitter</a>
+          </li>
+          <li class="menu__socnet-item">
+            <a href="#" class="menu__socnet-link link">Facebook</a>
+          </li>
+          <li class="menu__socnet-item">
+            <a href="#" class="menu__socnet-link link">LinkedIn</a>
+          </li>
         </ul>
       </div>
     </div>
