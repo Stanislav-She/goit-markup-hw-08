@@ -4,13 +4,14 @@
 
 .team__title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 28px;
   line-height: 1.2;
   letter-spacing: 0.03em;
   color: var(--brand-color-five);
 
   @include desktop {
+    margin-bottom: 50px;
     font-size: 36px;
   }
 }

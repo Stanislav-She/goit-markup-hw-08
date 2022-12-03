@@ -5,8 +5,7 @@
   background-repeat: no-repeat;
   background-position: center;
   max-width: 480px;
-  // margin-left: auto;
-  // margin-right: auto;
+
   background-size: cover;
   margin-left: auto;
   margin-right: auto;
@@ -47,6 +46,8 @@
   @include desktop {
     max-width: 1600px;
     padding: 200px 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

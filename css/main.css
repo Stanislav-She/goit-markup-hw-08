@@ -202,6 +202,9 @@ img {
   color: var(--brand-color-five);
   transition: color var(--transition);
 }
+.menu__container-link--current {
+  color: var(--brand-color);
+}
 
 .menu__contacts {
   margin-bottom: 64px;
@@ -243,6 +246,8 @@ img {
   font-size: 10px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+.menu__socnet-item:not(:last-child) {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 @media screen and (min-width: 480px) {
@@ -265,7 +270,7 @@ img {
   left: 0;
   width: 100vw;
   height: 100vh;
-  padding: 32px;
+  padding: 48px 40px 48px 40px;
   background-color: var(--brand-color-three);
   z-index: 999;
   transform: translateX(100%);
@@ -468,6 +473,8 @@ img {
   .solutions {
     max-width: 1600px;
     padding: 200px 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -647,7 +654,7 @@ img {
 
 .team__title {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 28px;
   line-height: 1.2;
   letter-spacing: 0.03em;
@@ -655,6 +662,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .team__title {
+    margin-bottom: 50px;
     font-size: 36px;
   }
 }
@@ -1299,9 +1307,6 @@ img {
 }
 
 .work__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   width: 100%;
 }
 @media screen and (min-width: 480px) {
@@ -1311,17 +1316,22 @@ img {
 }
 @media screen and (min-width: 768px) {
   .work__list {
-    width: 354px;
+    flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .work__list {
     width: 370px;
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 
 .work__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   outline: none;
   transition: box-shadow var(--transition);
 }
@@ -1335,9 +1345,6 @@ img {
 }
 
 .work__covertext {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
@@ -1352,8 +1359,9 @@ img {
 }
 
 .work__text {
-  width: 322px;
-  height: 168px;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
   font-size: 18px;
   line-height: 1.5;
   letter-spacing: 0.03em;
@@ -1364,6 +1372,7 @@ img {
   padding: 20px 24px;
   border: 1px solid var(--color-portfolio);
   border-top: none;
+  flex-grow: 1;
 }
 
 .works__title {
@@ -1387,11 +1396,16 @@ img {
 .basic__item {
   display: flex;
   flex-wrap: wrap;
-  width: 326px;
+  width: 320px;
   background: var(--brand-color-three);
   margin-bottom: 40px;
   cursor: pointer;
   gap: 8px;
+}
+@media screen and (min-width: 360px) {
+  .basic__item {
+    width: 326px;
+  }
 }
 @media screen and (min-width: 768px) {
   .basic__item {

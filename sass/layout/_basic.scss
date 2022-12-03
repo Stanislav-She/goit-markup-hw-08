@@ -5,11 +5,15 @@
 .basic__item {
   display: flex;
   flex-wrap: wrap;
-  width: 326px;
+  width: 320px;
   background: var(--brand-color-three);
   margin-bottom: 40px;
   cursor: pointer;
   gap: 8px;
+
+  @media screen and (min-width: 360px) {
+    width: 326px;
+  }
 
   @include tablet {
     justify-content: center;

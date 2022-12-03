@@ -57,6 +57,10 @@
 .menu__container-link {
   color: var(--brand-color-five);
   transition: color var(--transition);
+
+  &--current {
+    color: var(--brand-color);
+  }
 }
 
 .menu__contacts {
@@ -102,7 +106,10 @@
   font-size: 10px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+  &:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
 
   @include mobile {
     font-size: 18px;
