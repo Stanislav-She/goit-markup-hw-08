@@ -32,8 +32,6 @@
 
 .nav__list {
   display: none;
-  //   display: flex;
-  //   align-items: center;
 
   @include tablet {
     display: flex;
@@ -142,6 +140,6 @@
 
 .contacts__icon {
   height: 16px;
-  margin-right: 10px;
+  margin-right: 9px;
   fill: currentColor;
 }

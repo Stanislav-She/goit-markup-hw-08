@@ -424,7 +424,7 @@ img {
 
 .contacts__icon {
   height: 16px;
-  margin-right: 10px;
+  margin-right: 9px;
   fill: currentColor;
 }
 
@@ -575,12 +575,18 @@ img {
 }
 
 .qualities__subtitle {
+  display: flex;
+  justify-content: center;
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--brand-color-five);
+}
+@media screen and (min-width: 768px) {
+  .qualities__subtitle {
+    display: block;
+  }
 }
 
 .qualities__text {
@@ -611,7 +617,6 @@ img {
   line-height: 1.1;
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--brand-color-five);
 }
 
 .activity__item {
@@ -715,7 +720,6 @@ img {
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.03em;
-  color: var(--brand-color-five);
 }
 
 .team__specialty {
@@ -1302,7 +1306,7 @@ img {
 .works {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   gap: 30px;
 }
 
@@ -1330,6 +1334,7 @@ img {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   outline: none;
